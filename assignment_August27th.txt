@@ -1,0 +1,17 @@
+1)Welcome to java
+2)class and object ,datatypes
+3)variables and its default values
+4)instance, static and local variables
+5)how to call static variables method and how to instance variables and instance methods.
+6)typecasting, platform independent(.class) -->javap
+7)Scanner
+8)operators
+9)conditional statement  -->if-else,if-else-if -(Switch statement)
+
+
+creating object for class(new keyword,Class.forName(),factorymethod,clone)
+Control statements or iterative statement(while loop ,for loop, do-while loop)
+enhanced forloop from jdk 1.5 or forEach -->jdk1.8
+Constructors-> default constructor, parameter constructor
+this keyword 
+call by value and call by reference.
