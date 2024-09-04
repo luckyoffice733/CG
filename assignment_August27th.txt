@@ -15,3 +15,69 @@ enhanced forloop from jdk 1.5 or forEach -->jdk1.8
 Constructors-> default constructor, parameter constructor
 this keyword 
 call by value and call by reference.
+
+//search
+Difference between copyconstructor and clone()?
+Difference between callByValue,callby reference and callByObject;
+Difference between  is-a relation and has-relation
+what is interface ? 
+what is abstract class?
+
+
+1234 -->yes
+12245 -->yes
+21345 -->No
+
+
+public class Lab3{
+
+  public static boolean checkNumber(int n){
+     boolean b=false;
+    
+    while(n>0){
+         int ldt = n%10;
+         n=n/10;
+         int ndt =n%10;
+         
+      if(ndt<ldt){
+        b=true;
+     }else{
+        b=false;
+        break;
+     }
+}
+   return b;
+}
+
+
+public static void main(String args){
+Scanner  input = new Scanner(System.in);
+int num =input.nextInt();
+boolean ind =Lab3.checkNumber(num);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
