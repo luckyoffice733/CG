@@ -39,8 +39,8 @@ public class Lab3{
          n=n/10;
          int ndt =n%10;
          
-      if(ndt<ldt){
-        b=true;
+      if(ndt<ldt){ 
+        b=true; //ressignment
      }else{
         b=false;
         break;
