@@ -1,0 +1,147 @@
+Regular Expression:
+===================
+
+A Regular Expression is a expression which represents a 
+group of Strings according to a particular pattern.
+
+Example:
+We can write a Regular Expression to represent all valid mail ids.
+
+We can write a Regular Expression to represent all valid mobile numbers.
+
+The main important application areas of Regular Expression are:
+• To implement validation logic.
+• To develop Pattern matching applications
+
+
+Pattern class:
+---------------
+A Pattern object represents "compiled version of 
+Regular Expression".
+
+We can create a Pattern object by using compile() method of Pattern class.
+
+public static Pattern compile(String regex);
+
+Example:
+---------
+Pattern p=Pattern.compile("ab");
+
+Note: if we refer API we will get more information about pattern class.
+
+Matcher:
+--------
+A Matcher object can be used to match character sequences against a Regular Expression.
+We can create a Matcher object by using matcher() method of Pattern class.
+
+public Matcher matcher(String target);
+
+Important methods of Matcher class:
+
+1. boolean find();
+It attempts to find next match and returns true if it is 
+available otherwise returns false.
+
+2. int start();
+Returns the start index of the match.
+
+3. int end();
+Returns the offset(equalize) after the last character 
+matched.(or)Returns the "end+1" index of the matched.
+
+4. String group(); 
+Returns the matched Pattern.
+
+Note: Pattern and Matcher classes are available 
+in java.util.regex package
+
+
+Character classes:
+------------------
+1. [abc]-------------------Either 'a' or 'b' or 'c'
+2. [^abc] -----------------Except 'a' and 'b' and 'c'
+3. [a-z] --------------------Any lower case alphabet symbol
+4. [A-Z] --------------------Any upper case alphabet symbol
+5. [a-zA-Z] ----------------Any alphabet symbol
+6. [0-9] --------------------Any digit from 0 to 9
+7. [a-zA-Z0-9] ------------Any alphanumeric character
+8. [^a-zA-Z0-9] ------------Any special character
+
+Predefined character classes:
+-------------------------------
+\s---------------------space character
+\d---------------------Any digit from o to 9[o-9] 
+\w---------------------Any word character[a-zA-Z0-9] 
+. ---------------------Any character including special characters. 
+\S---------------------any character except space character 
+\D---------------------any character except digit 
+\W---------------------any character except word character(special character)
+
+Quantifiers:
+=============
+Quantifiers can be used to specify no of characters to match.
+
+a-----------------------Exactly one 'a'
+a+----------------------At least one 'a'
+a*----------------------Any no of a's including zero number
+a? ----------------------At most one 'a' or zero number
+n{x}   ->	Matches any string that contains a sequence of X n's
+n{x,y} ->	Matches any string that contains a sequence of X to Y n's
+n{x,}  ->       Matches any string that contains a sequence of at least X n's
+
+
+Write a regular expression for mobile number validation:
+---------------------------------------------------------
+[789][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]
+
+or
+
+[789][0-9]{9}
+
+or
+
+[789]\\d{9}
+
+
+1)write a java program to validate a mobile number using Pattern and Matcher
+
+2)
+a)Write a regular expressions to represent all names starts with 'aA'.
+b)minimum 6 characters and maximum 8
+
+sol:
+====
+[aA][a-zA-Z]{6,8}
+
+3)Write a regular expression  to represent all names starts with aAS  and end with kK
+sol:
+====
+pattern :- [aAS][a-zA-Z]*[kK]  =>AllenSwathik
+
+
+
+4)write a pattern to check valid email address
+pattern:
+
+[a-zA-Z][a-zA-Z0-9-.]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+ 
+
+
+
+
+
+
+
+
+Note : String class split() method can take regular 
+expression as argument where as pattern class split() 
+method can take target string as the argument.
+
+
+
+
+
+
+
+
+
+
