@@ -4270,7 +4270,7 @@ Example:
   ====
    Map is a interface
 
-   Map is not Child not a interface of Collection
+   Map is not a Child interface of Collection
    
    To represent group of key, value pairs as a single entity
    then we need to go for Map
@@ -4301,19 +4301,24 @@ Example:
    ==========
    Duplicate keys are not allowed and values can be duplicated
 
-   Insertion order is not preserved based on key
+   Insertion order is not preserved (based on key)
    
-   underline Datastructure is Hashtable.
+   Internally uses  HashTable as DataStructure.
 
-   Hetergeneous and Homogeneous keys are allowed
+   Duplicate Keys are not allowed ,values can be duplicated
+
+   Heterogeneous and Homogeneous keys and values are allowed
    
    methods:
    ========
    put(Object key,value Object value);
    get(Object o);
    Set  entrySet();
-   containsValue(Object o);
-   remove(Object Key)    
+   containsKey();
+   containsValue();
+   remove(Object Key)  
+   values() -->only values
+   keySet() --> only key
    
    Constructors:
    =============
@@ -4348,16 +4353,19 @@ Example:
 
    LinkedHashMap:
    ==============
-   Duplicate keys are not allowed and values are duplicates
+   Duplicate keys are not allowed(unique) and values are duplicates
 
    Insertion order is preserved based  on key 
 
-   underline DataStructure is doubke linked-list and hashtable.
+   underline DataStructure is double linked-list and hashtable.
 
    Homogeneous and hetergeneous key,value pairs are allowed
 
 
   1)WAP to Add Key,value pairs into LinkedHashMap
+
+
+
 
 
 
